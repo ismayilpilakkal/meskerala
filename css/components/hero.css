@@ -20,17 +20,40 @@
     overflow: hidden;
 }
 
-/* Smooth Gradient Fade out for Hero */
-.creative-hero::after {
-    content: '';
+/* Organic Wave Transition */
+.hero-wave-divider {
     position: absolute;
-    bottom: 0;
+    bottom: -1px; /* Avoid anti-aliasing gaps */
     left: 0;
     width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, rgba(253, 251, 247, 0) 0%, var(--bg-primary) 100%);
-    pointer-events: none;
-    z-index: 5;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    /* Soft drop shadow fading upwards to create depth against the hero background */
+    filter: drop-shadow(0 -8px 20px rgba(0, 0, 0, 0.04));
+}
+
+.hero-wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+    transform: rotate(180deg); /* Flip so the flat edge is at the bottom and curve cuts into hero */
+}
+
+.hero-wave-divider .shape-fill {
+    fill: var(--bg-primary); /* Matches the news section below perfectly */
+}
+
+@media (min-width: 768px) {
+    .hero-wave-divider svg {
+        height: 120px;
+    }
+}
+@media (min-width: 1200px) {
+    .hero-wave-divider svg {
+        height: 160px;
+    }
 }
 
 .blur-circle {
