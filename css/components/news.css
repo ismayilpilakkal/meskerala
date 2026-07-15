@@ -1,0 +1,223 @@
+/* ========================================
+   Premium Editorial / News Layout 2026
+   ======================================== */
+
+.bento-news-wrapper {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.bento-news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .bento-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-news-wrapper {
+        -webkit-box-reflect: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .bento-news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bento-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bento-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--charcoal);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.bento-tall {
+    height: 500px;
+}
+
+.bento-square {
+    height: 240px;
+}
+
+.bento-light {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+}
+
+.bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+
+.bento-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 2;
+}
+
+.bento-badge.dark {
+    background: #e4f4c2;
+    color: #1a5b40;
+}
+
+.bento-content-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-content-center {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.bento-date-large {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.bento-title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.bento-tall .bento-title {
+    font-size: 1.5rem;
+}
+
+.bento-subtitle {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.bento-desc {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.bento-meta {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* ========================================
+   Ticker
+   ======================================== */
+.notifications-ticker {
+    display: flex;
+    align-items: center;
+    background: var(--charcoal);
+    color: var(--white);
+    height: 56px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-2xl);
+}
+
+.ticker-label {
+    background: var(--emerald);
+    color: var(--white);
+    font-weight: 700;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ticker-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: var(--space-lg);
+}
+
+.ticker-item {
+    margin-right: 60px;
+    font-size: var(--text-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+}
+
+.badge.new {
+    background: var(--emerald-light);
+    color: var(--white);
+}

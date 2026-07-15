@@ -1,0 +1,66 @@
+/* Refactored Utility Classes */
+.u-delay-100 { transition-delay: 0.1s; }
+.u-delay-200 { transition-delay: 0.2s; }
+.u-delay-300 { transition-delay: 0.3s; }
+.u-delay-400 { transition-delay: 0.4s; }
+.u-py-60 { padding-top: 60px; padding-bottom: 60px; }
+.u-mb-20 { margin-bottom: 20px; }
+.proj-badge-label { display:inline-block; padding: 4px 12px; border-radius: 50px; background: rgba(95, 143, 131, 0.1); color: var(--emerald); font-size: 0.8rem; font-weight: 700; }
+.proj-cat-label { color: var(--proj-emerald, #10b981); font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
+.u-fw-600 { font-weight: 600; }
+.u-text-sm { font-size: 0.85rem; }
+.u-px-16 { padding-left: 16px; padding-right: 16px; }
+.u-py-8 { padding-top: 8px; padding-bottom: 8px; }
+.u-h-200 { height: 200px; }
+.u-mt-15 { margin-top: 15px; }
+.u-text-success { color: #059669; }
+.u-text-primary { color: var(--emerald); }
+.u-row-reverse { flex-direction: row-reverse; }
+.u-text-center { text-align: center; }
+.u-mt-50 { margin-top: 50px; }
+.u-text-muted { color: var(--proj-text-muted, #6b7280); }
+.u-text-navy { color: var(--proj-navy, #1e3a8a); }
+.u-mb-10 { margin-bottom: 10px; }
+.u-text-lg { font-size: 1.3rem; }
+.u-flex-center-gap-15 { display:flex; align-items:center; gap: 15px; }
+.u-rounded-circle { border-radius: 50%; }
+.u-mb-5 { margin-bottom: 5px; }
+.u-text-emerald { color: var(--proj-emerald, #10b981); }
+.u-text-md { font-size: 0.9rem; }
+.u-m-0 { margin: 0; }
+.u-p-40 { padding: 40px; }
+.u-text-xl { font-size: 1.2rem; }
+.u-mb-40 { margin-bottom: 40px; }
+.u-text-white-90 { color: rgba(255,255,255,0.9); }
+.u-flex-center-wrap-gap-20 { display:flex; gap: 20px; justify-content:center; flex-wrap:wrap; }
+.u-bg-white { background: white; }
+.u-text-white { color: white; }
+.u-border-white { border-color: white; }
+.u-mt-8 { margin-top: 8px; }
+/* Institutions Refactored Styles */
+.inst-sec-bg { background: var(--bg-secondary); padding: 80px 0; }
+.inst-center-block { display: block; max-width: 800px; margin: 0 auto; text-align: center; }
+.inst-badge { display:inline-block; margin-bottom:10px; background:#5f8f83; color:#fff; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:600; letter-spacing:1px; }
+.inst-mw-700-mt-40 { max-width: 700px; margin: 40px auto 0; }
+.inst-table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: var(--shadow-sm); border-radius: 12px; overflow: hidden; }
+.inst-th-bg { background: var(--emerald); color: #fff; }
+.inst-th-left { padding: 18px 24px; text-align: left; font-weight: 600; font-size: 1.1rem; }
+.inst-th-center { padding: 18px 24px; text-align: center; font-weight: 600; font-size: 1.1rem; }
+.inst-tr-border { border-bottom: 1px solid var(--border-color); }
+.inst-td-left { padding: 16px 24px; font-weight: 500; }
+.inst-td-center { padding: 16px 24px; text-align: center; color: var(--text-secondary); font-weight: 600; }
+.inst-tr-bg-alt { background: #e6f0ed; }
+.inst-td-left-bold { padding: 16px 24px; font-weight: 700; font-size: 1.1rem; color: var(--emerald); }
+.inst-td-center-bold { padding: 16px 24px; text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--emerald); }
+.inst-radius-top { overflow:hidden; border-radius: 16px 16px 0 0; }
+/* Notifications Refactored Styles */
+.notif-header-layout { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 30px; }
+.notif-list-layout { display: flex; flex-direction: column; gap: 16px; }
+.notif-card { padding: 24px 30px; border-radius: 16px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 20px; }
+.notif-badge { flex-shrink: 0; padding: 5px 12px; font-size: 11px; }
+.u-flex-1 { flex: 1; }
+.notif-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; font-family: var(--font-heading); }
+.notif-desc { font-size: 13px; color: var(--text-muted); }
+.notif-date { font-size: 12px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
+.notif-badge-emerald { flex-shrink: 0; padding: 5px 12px; font-size: 11px; background: rgba(95, 143, 131,0.1); color: var(--emerald); }
+.notif-badge-gold { flex-shrink: 0; padding: 5px 12px; font-size: 11px; background: rgba(255, 255, 255,0.15); color: var(--gold-dark); }

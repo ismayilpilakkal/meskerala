@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+/* ========================================
+   MES Kerala — Premium Design System 2026
+   ======================================== */
+
+:root {
+    /* Brand Colors — Deep Academic Green */
+    --emerald: #1F4539; 
+    --emerald-light: #2C6150;
+    --emerald-dark: #142E26;
+    --emerald-muted: rgba(31, 69, 57, 0.05);
+
+    /* Accent Colors — Premium Gold */
+    --gold: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dark: #AA8C2C;
+
+    /* Neutrals */
+    --charcoal: #0F172A;
+    --slate: #334155;
+    --gray: #64748B;
+    --silver: #CBD5E1;
+    --ivory: #FAFAFA;
+    --white: #FFFFFF;
+
+    /* Functional Backgrounds */
+    --bg-primary: #FDFBF7; /* Soft elegant off-white */
+    --bg-secondary: #F1F5F9;
+    --bg-surface: #FFFFFF; /* Crisp white for cards */
+    --bg-glass: rgba(255, 255, 255, 0.7);
+
+    /* Text Colors */
+    --text-primary: var(--charcoal);
+    --text-secondary: var(--slate);
+    --text-muted: var(--gray);
+    --border-color: #E2E8F0;
+
+    /* Typography Scale */
+    --font-heading: 'Outfit', -apple-system, sans-serif;
+    --font-body: 'Outfit', -apple-system, sans-serif;
+    
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+
+    /* Spacing System */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+
+    --section-padding: var(--space-4xl) var(--space-xl);
+
+    /* Border Radius System */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Shadows (Premium Elevation) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    --shadow-emerald: 0 10px 25px -5px rgba(31, 69, 57, 0.15);
+    --shadow-gold: 0 10px 25px -5px rgba(212, 175, 55, 0.2);
+
+    /* Transitions & Animations */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Layout Constants */
+    --container-max: 1280px;
+    --navbar-height: 80px;
+}
+
+/* ========================================
+   Reset & Base
+   ======================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* ========================================
+   Global Layout & Typography
+   ======================================== */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl)); }
+h2 { font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl)); }
+h3 { font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); }
+h4 { font-size: clamp(var(--text-xl), 2vw, var(--text-2xl)); }
+p { font-size: var(--text-base); margin-bottom: var(--space-md); color: var(--text-secondary); max-width: 65ch; }
+
+/* Subtle Background Noise / Texture for Premium Feel */
+.bg-noise {
+    position: relative;
+}
+.bg-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Global utility */
+.z-relative { position: relative; z-index: 1; }
+/* Global Background & Mesh Gradients */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(31, 69, 57, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(31, 69, 57, 0.04) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(212, 175, 55, 0.03) 0px, transparent 50%);
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.85\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.02\"/%3E%3C/svg%3E');
+}
