@@ -28,7 +28,7 @@
     
     /* Layout */
     --proj-container: 1400px;
-    --proj-section-pad: clamp(80px, 12vh, 140px) 5%;
+    --proj-section-pad: clamp(50px, 8vh, 80px) 5%;
 }
 
 /* ========================================
@@ -58,7 +58,7 @@ html { scroll-behavior: smooth; }
 
 .proj-title-block {
     text-align: center;
-    margin-bottom: clamp(40px, 6vw, 70px);
+    margin-bottom: clamp(30px, 4vw, 50px);
 }
 
 .proj-title-block h2 {
@@ -440,7 +440,7 @@ html { scroll-behavior: smooth; }
 }
 
 .proj-cat-card {
-    padding: 20px 30px;
+    padding: 15px 20px;
     background: white;
     border: 1px solid var(--proj-border);
     border-radius: var(--proj-radius-sm);
@@ -513,7 +513,7 @@ html { scroll-behavior: smooth; }
 }
 
 .proj-card-body {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -563,7 +563,7 @@ html { scroll-behavior: smooth; }
     .proj-card.horizontal .proj-card-body {
         width: 50%;
         justify-content: center;
-        padding: 50px;
+        padding: 30px;
     }
 }
 
@@ -577,7 +577,7 @@ html { scroll-behavior: smooth; }
 }
 
 .proj-res-card {
-    padding: 40px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -700,7 +700,7 @@ html { scroll-behavior: smooth; }
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 30px;
+    padding: 20px;
     background: white;
     border-radius: var(--proj-radius-md);
     border: 1px solid var(--proj-border);
@@ -737,16 +737,22 @@ html { scroll-behavior: smooth; }
 }
 
 .proj-story-card {
-    padding: 40px;
+    padding: 20px;
     border-top: 4px solid var(--proj-emerald);
 }
 
 .proj-story-card p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-style: italic;
     color: var(--proj-navy);
-    line-height: 1.8;
-    margin-bottom: 25px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.proj-story-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
 }
 
 /* ========================================
@@ -806,10 +812,15 @@ html { scroll-behavior: smooth; }
     overflow: hidden;
     box-shadow: var(--proj-shadow-lg);
     cursor: pointer;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
 }
 
 .proj-video-wrap img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     filter: brightness(0.7);
     transition: filter 0.4s ease;
@@ -881,20 +892,21 @@ html { scroll-behavior: smooth; }
    ======================================== */
 .proj-team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    justify-content: center;
+    gap: 20px;
 }
 
 .proj-team-card {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 10px;
     background: white;
 }
 
 .proj-team-img {
-    width: 120px; height: 120px;
+    width: 80px; height: 80px;
     border-radius: 50%;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
     object-fit: cover;
     box-shadow: var(--proj-shadow-sm);
 }
@@ -944,12 +956,13 @@ html { scroll-behavior: smooth; }
 .proj-testi-slide {
     min-width: 100%;
     scroll-snap-align: center;
+    padding: 25px !important;
 }
 @media (min-width: 768px) {
     .proj-testi-slide { min-width: calc(50% - 15px); }
 }
 
-.proj-testi-slide p { font-size: 1.2rem; font-style: italic; color: var(--proj-navy); margin-bottom: 30px; line-height: 1.7;}
+.proj-testi-slide p { font-size: 1.05rem; font-style: italic; color: var(--proj-navy); margin-bottom: 20px; line-height: 1.7;}
 
 /* ========================================
    17. FAQ

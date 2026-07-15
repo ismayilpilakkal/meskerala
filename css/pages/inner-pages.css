@@ -781,7 +781,7 @@
 
 .office-card-tag {
     display: inline-block;
-    background: #000;
+    background: var(--emerald);
     color: #fff;
     padding: 4px 12px;
     border-radius: 100px;
@@ -801,5 +801,319 @@
 
 .office-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 6px; }
 
+/* ========================================
+   Connected Cards Flow (Founder Page)
+   ======================================== */
+.connected-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.connected-flow-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.connected-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 20px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--charcoal);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.connected-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--emerald);
+    transform: translateY(-3px);
+}
+
+.connected-arrow {
+    color: var(--emerald);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Dark mode variations for connected flow */
+.bg-dark .connected-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.bg-dark .connected-card:hover {
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.1);
+}
+.bg-dark .connected-arrow {
+    color: var(--gold);
+}
+
+/* ========================================
+   Founder Minimal Layout (40/60 Split)
+   ======================================== */
+.founder-minimal-grid {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.founder-minimal-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.founder-portrait-card {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: white;
+}
+
+.founder-info-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.founder-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.founder-info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.founder-info-label {
+    color: var(--slate);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.founder-info-value {
+    color: var(--charcoal);
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.founder-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-2xl);
+}
+
+.founder-content-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--emerald-light);
+}
+
+.founder-content-card h3 {
+    color: var(--emerald-dark);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.founder-content-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .founder-minimal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .founder-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   Office Bearers Layout
+   ======================================== */
+.bearers-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.bearers-header-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--charcoal);
+    margin-bottom: var(--space-sm);
+}
+
+.bearers-header-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Executive Leadership Card */
+.bearer-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bearer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform var(--transition-smooth);
+    transform-origin: left;
+}
+
+.bearer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--emerald-light);
+}
+
+.bearer-card:hover::before {
+    transform: scaleX(1);
+}
+
+.bearer-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(31,69,57,0.05); /* emerald transparent */
+    color: var(--emerald);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg) auto;
+}
+
+.bearer-card-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.bearer-card-role {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bearer-card-district {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* District Card */
+.district-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-smooth);
+}
+
+.district-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.district-card-header {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.district-card-icon {
+    color: var(--gold);
+}
+
+.district-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--emerald-dark);
+    font-weight: 700;
+    margin: 0;
+}
+
+.district-role-group {
+    margin-bottom: 12px;
+}
+
+.district-role-group:last-child {
+    margin-bottom: 0;
+}
+
+.district-role-label {
+    font-size: 0.8rem;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.district-role-name {
+    font-size: 1.05rem;
+    color: var(--charcoal);
+    font-weight: 600;
+}

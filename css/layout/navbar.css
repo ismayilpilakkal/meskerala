@@ -163,6 +163,11 @@
 
 .dropdown-menu li {
     list-style: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
 }
 
 .dropdown-menu a {
@@ -180,6 +185,26 @@
     background-color: var(--bg-secondary);
     color: var(--emerald) !important;
     padding-left: 24px;
+}
+
+/* Hide specific items from About MES dropdown */
+.nav-links .dropdown-menu li:has(a[href="genesis.html"]),
+.nav-links .dropdown-menu li:has(a[href="profile.html"]),
+.nav-links .dropdown-menu li:has(a[href="vision.html"]),
+.nav-links .dropdown-menu li:has(a[href="institutions.html"]) {
+    display: none !important;
+}
+
+/* Hide State and District Office Bearers from Office Bearers dropdown */
+.nav-links > li:nth-child(3) > .dropdown-menu li:nth-child(2),
+.nav-links > li:nth-child(3) > .dropdown-menu li:nth-child(3) {
+    display: none !important;
+}
+
+/* Add blank space to About MES and Office Bearers dropdowns for future options */
+.nav-links > li:nth-child(2) > .dropdown-menu,
+.nav-links > li:nth-child(3) > .dropdown-menu {
+    padding-bottom: 160px;
 }
 
 /* Nav Right */

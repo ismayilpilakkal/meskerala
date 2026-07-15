@@ -248,7 +248,7 @@ html, body {
 
 .split-ui-left {
     width: 320px;
-    background: #1a5b40;
+    background: var(--emerald);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -320,10 +320,10 @@ html, body {
 }
 
 .split-ui-right .split-ui-radio input:checked + .radio-custom {
-    border-color: #1a5b40;
+    border-color: var(--emerald);
 }
 .split-ui-right .split-ui-radio input:checked + .radio-custom::after {
-    background: #1a5b40;
+    background: var(--emerald);
 }
 
 .split-ui-divider {
@@ -360,7 +360,7 @@ html, body {
 
 .split-ui-list-item.active {
     background: #e4f4c2;
-    color: #1a5b40;
+    color: var(--emerald);
     border-color: #e4f4c2;
     font-weight: 600;
 }
@@ -395,7 +395,7 @@ html, body {
 
 .btn-split-prev {
     background: #ffffff;
-    color: #1a5b40;
+    color: var(--emerald);
 }
 .btn-split-prev:hover {
     background: #f0f0f0;
@@ -403,7 +403,7 @@ html, body {
 
 .btn-split-next {
     background: #e4f4c2;
-    color: #1a5b40;
+    color: var(--emerald);
 }
 .btn-split-next:hover {
     background: #d4e8a8;
@@ -440,7 +440,7 @@ html, body {
 
 .btn-split-save {
     background: #e4f4c2;
-    color: #1a5b40;
+    color: var(--emerald);
     border: none;
     padding: 8px 20px;
     border-radius: 20px;
