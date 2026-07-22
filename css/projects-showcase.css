@@ -328,12 +328,17 @@ html { scroll-behavior: smooth; }
     flex-wrap: wrap;
 }
 
-.proj-selects select {
+.custom-dropdown {
+    position: relative;
+    user-select: none;
+    min-width: 140px;
+}
+
+.dropdown-selected {
     padding: 12px 35px 12px 20px;
     border: 1px solid var(--proj-border);
     border-radius: 50px;
     background: var(--proj-bg-secondary) url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%235f8f83" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>') no-repeat right 15px center;
-    appearance: none;
     font-size: 0.95rem;
     color: var(--proj-navy);
     font-weight: 500;
@@ -341,8 +346,49 @@ html { scroll-behavior: smooth; }
     transition: var(--proj-transition);
 }
 
-.proj-selects select:hover {
+.custom-dropdown.active .dropdown-selected,
+.dropdown-selected:hover {
     border-color: var(--proj-emerald);
+}
+
+.dropdown-options {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.custom-dropdown.active .dropdown-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-option {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    color: var(--proj-navy);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-option:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.dropdown-option:hover {
+    background: var(--proj-emerald);
+    color: #ffffff;
 }
 
 /* ========================================
@@ -350,12 +396,14 @@ html { scroll-behavior: smooth; }
    ======================================== */
 .proj-featured {
     display: grid;
-    gap: 50px;
+    gap: 40px;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 @media (min-width: 1024px) {
     .proj-featured {
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1fr 1.1fr;
         align-items: center;
     }
 }
@@ -365,6 +413,8 @@ html { scroll-behavior: smooth; }
     overflow: hidden;
     position: relative;
     box-shadow: var(--proj-shadow-md);
+    aspect-ratio: 4/3;
+    max-height: 480px;
 }
 
 .proj-feat-img img {

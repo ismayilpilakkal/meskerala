@@ -88,4 +88,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* --- 5. Custom Dropdowns --- */
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const options = dropdown.querySelectorAll('.dropdown-option');
+        
+        // Toggle dropdown open/close
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Close any other open dropdowns
+            dropdowns.forEach(d => {
+                if (d !== dropdown) d.classList.remove('active');
+            });
+            dropdown.classList.toggle('active');
+        });
+        
+        // Handle option selection
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                selected.innerText = option.innerText;
+                dropdown.classList.remove('active');
+                
+                // You can dispatch a custom event here if you need to filter projects later
+                // e.g. dropdown.dispatchEvent(new Event('change'));
+            });
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+        dropdowns.forEach(d => d.classList.remove('active'));
+    });
+
 });
